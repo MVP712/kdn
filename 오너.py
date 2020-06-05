@@ -1,4 +1,5 @@
 import discord
+import os
 
 client = discord.Client()
 
@@ -40,4 +41,5 @@ async def on_message(message):
     if message.content.startswith("왜"):
         await message.channel.send("ㅋ")
 
-client.run("NzE3OTkwNTA4MjkwNjM3ODc0.XtiW0Q.tfrzHJ4X1uhACd143NOqGixIhME")
+access_token = os.environ["BOT_TOKEN"]
+        client.run(access_token)
