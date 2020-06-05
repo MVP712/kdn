@@ -1,4 +1,5 @@
 import discord
+import os
 
 client = discord.Client()
 
@@ -19,5 +20,5 @@ async def on_message(message):
     if message.content.startswith("!사진"):
         
 
-
-client.run("NzE2OTI1MjgzMzg2Nzg1ODgy.XtcHNQ.kEIUbKxf8tjvQPUBx8MY3JEOxTc")
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
